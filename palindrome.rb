@@ -1,5 +1,14 @@
 # Monkeypatch string to include palindrome.
 class String
+  # Returns true for a palindrome, false otherwise.
+  def palindrome?
+    processed_content == processed_content.reverse
+  end
+
+  def blank?; end
+
+  private
+
   # Processes the string for palindrome testing.
   def processor(string)
     string.downcase
@@ -8,11 +17,6 @@ class String
   # Returns content for palindrome testing.
   def processed_content
     processor(self)
-  end
-
-  # Returns true for a palindrome, false otherwise.
-  def palindrome?
-    processed_content == processed_content.reverse
   end
 end
 
@@ -25,13 +29,15 @@ class Phrase < String
     @translation = translation
   end
 
-  # Processes the translation for palindrome testing.
-  def processed_content
-    processor(translation)
-  end
-
   # Makes the phrase LOUDER.
   def louder
     upcase
+  end
+
+  private
+
+  # Processes the translation for palindrome testing.
+  def processed_content
+    processor(translation)
   end
 end
