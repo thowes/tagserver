@@ -1,4 +1,4 @@
-# Defines a Phrase class (inheriting from String).
+# Monkeypatch string to include palindrome.
 class String
   # Processes the string for palindrome testing.
   def processor(string)
@@ -17,7 +17,6 @@ class String
 end
 
 
-    upcase
 
 # Defines a translated Phrase.
 class Phrase < String
@@ -35,5 +34,6 @@ class Phrase < String
 
   # Makes the phrase LOUDER.
   def louder
+    upcase
   end
 end
