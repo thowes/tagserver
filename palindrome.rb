@@ -1,5 +1,5 @@
 # Defines a Phrase class (inheriting from String).
-class Phrase < String
+class String
   # Processes the string for palindrome testing.
   def processor(string)
     string.downcase
@@ -14,12 +14,11 @@ class Phrase < String
   def palindrome?
     processed_content == processed_content.reverse
   end
+end
 
   # Makes the phrase LOUDER.
-  def louder
     upcase
   end
-end
 
 # Defines a translated Phrase.
 class TranslatedPhrase < Phrase
@@ -34,4 +33,6 @@ class TranslatedPhrase < Phrase
   def processed_content
     processor(translation)
   end
+
+  def louder
 end
