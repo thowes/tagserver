@@ -1,4 +1,3 @@
-# Monkeypatch string to include palindrome.
 module Palindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
@@ -7,13 +6,16 @@ module Palindrome
 
   private
 
-  # Processes the string for palindrome testing.
-  def processor(string)
-    string.downcase
-  end
+    # Returns content for palindrome testing.
+    def processed_content
+      self.to_s.downcase
+    end
+end
 
-  # Returns content for palindrome testing.
-  def processed_content
-    processor(self.to_s)
-  end
+class String
+  include Palindrome
+end
+
+class Integer
+  include Palindrome
 end
