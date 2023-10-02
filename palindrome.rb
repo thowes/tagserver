@@ -1,4 +1,5 @@
 def palindrome?(string)
+end
 # Defines a Phrase class.
 class Phrase
   attr_accessor :content
@@ -17,4 +18,3 @@ puts phrase.content
 # Returns true for a palindrome, false otherwise.
   processed_content = string.downcase
   processed_content == processed_content.reverse
-end
