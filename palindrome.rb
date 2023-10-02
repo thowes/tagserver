@@ -1,4 +1,6 @@
+# Returns true for a palindrome, false otherwise.
 def palindrome?(string)
+  processed_content == processed_content.reverse
 end
 # Defines a Phrase class.
 class Phrase
@@ -15,6 +17,4 @@ puts phrase.content
 phrase.content = "Able was I, ere I saw Elba."
 puts phrase.content
 
-# Returns true for a palindrome, false otherwise.
   processed_content = string.downcase
-  processed_content == processed_content.reverse
