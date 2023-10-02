@@ -16,12 +16,11 @@ class String
   end
 end
 
-  # Makes the phrase LOUDER.
+
     upcase
-  end
 
 # Defines a translated Phrase.
-class TranslatedPhrase < Phrase
+class Phrase < String
   attr_accessor :translation
 
   def initialize(content, translation)
@@ -34,5 +33,7 @@ class TranslatedPhrase < Phrase
     processor(translation)
   end
 
+  # Makes the phrase LOUDER.
   def louder
+  end
 end
