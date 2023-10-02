@@ -14,7 +14,6 @@ class Phrase
 
   # Makes the phrase LOUDER.
   def louder
-    content.upcase
+    self.content.upcase
   end
-
 end
