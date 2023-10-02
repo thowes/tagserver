@@ -82,9 +82,6 @@ puts imperative_lengths(states)
 
 # lengths: Functional version
 def functional_lengths(states)
-  states.reduce({}) do |lengths, state|
-    lengths[state] = state.length
-    lengths
-  end
+  states.reduce({}) { |lengths, state| lengths.merge( {state => state.length}) }
 end
 puts functional_lengths(states)
