@@ -15,5 +15,18 @@ But bears it out even to the edge of doom.
   If this be error and upon me proved,
   I never writ, nor no man ever loved."
 
+# Unique words
 uniques = {}
+# All words in the text
 words = sonnet.scan(/\w+/)
+
+# Iterate through `words` and build up a hash of unique words.
+words.each do |word|
+  if uniques[word]
+    uniques[word] += 1
+  else
+    uniques[word]  = 1
+  end
+end
+
+puts uniques
