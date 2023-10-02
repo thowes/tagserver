@@ -14,10 +14,16 @@ def imperative_urls(states)
   end
   urls
 end
-p imperative_urls(states)
+# p imperative_urls(states)
 
 # urls: Functional version
 def functional_urls(states)
   states.map { |state| urlify(state) }
 end
-puts functional_urls(states).inspect
+# puts functional_urls(states).inspect
+
+# state's urls
+def states_urls(states)
+  states.map { |state| "https://example.com/#{urlify(state)}" }
+end
+puts states_urls(states).inspect
