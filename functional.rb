@@ -16,15 +16,15 @@ def imperative_urls(states)
 end
 p imperative_urls(states)
 
-# urls: Functional version
+# urls: Functional version, collect is an alias for map
 def functional_urls(states)
-  states.map { |state| urlify(state) }
+  states.collect { |state| urlify(state) }
 end
 puts functional_urls(states).inspect
 
-# state's urls
+# state's urls, collect is an alias for map
 def states_urls(states)
-  states.map { |state| "https://example.com/#{urlify(state)}" }
+  states.collect { |state| "https://example.com/#{urlify(state)}" }
 end
 puts states_urls(states).inspect
 
@@ -40,9 +40,10 @@ def imperative_singles(states)
 end
 puts imperative_singles(states).inspect
 
-# singles: Functional version
+# singles: Functional version, reject is the opposite of select
 def functional_singles(states)
-  states.select { |state| state.split.length == 1 }
+  # states.select { |state| state.split.length == 1 } # find_all is alias of select
+  states.reject { |state| state.split.length != 1 }
 end
 puts functional_singles(states).inspect
 
@@ -81,8 +82,19 @@ def imperative_lengths(states)
 end
 puts imperative_lengths(states)
 
-# lengths: Functional version
+# lengths: Functional version using `inject`
 def functional_lengths(states)
-  states.reduce({}) { |lengths, state| lengths.merge( {state => state.length}) }
+  states.inject({}) do |lengths, state| # inject is an alias for reduce
+    lengths[state] = state.length
+    lengths
+  end
+  # states.reduce({}) { |lengths, state| lengths.merge( {state => state.length}) }
 end
 puts functional_lengths(states)
+
+# a function that returns the product of all the elements in an array.
+def product_of_array(numbers)  
+  numbers.reduce { |total, n| total *= n }
+end
+puts product_of_array(numbers)
+
