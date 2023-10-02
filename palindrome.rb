@@ -13,7 +13,8 @@ class Phrase
   end
 
   # Makes the phrase LOUDER.
-  def louder; end
+  def louder
     content.upcase
+  end
 
 end
