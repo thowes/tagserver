@@ -12,7 +12,8 @@ class Phrase
     processed_content == processed_content.reverse
   end
 
-# Makes the phrase LOUDER.
+  # Makes the phrase LOUDER.
   def louder; end
+    content.upcase
 
 end
