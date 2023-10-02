@@ -1,7 +1,4 @@
-# Returns true for a palindrome, false otherwise.
 def palindrome?(string)
-  processed_content = string.downcase
-  processed_content == processed_content.reverse
 end
 
 # Defines a Phrase class.
@@ -12,6 +9,7 @@ class Phrase
     @content = content
   end
 
+# Returns true for a palindrome, false otherwise.
   def palindrome?
     processed_content = self.content.downcase
     processed_content == processed_content.reverse
