@@ -11,7 +11,8 @@ class Phrase
     processed_content = self.content.downcase
     processed_content == processed_content.reverse
   end
-end
 
 # Makes the phrase LOUDER.
 def louder; end
+
+end
