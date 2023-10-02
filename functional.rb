@@ -51,3 +51,32 @@ def includes_dakotas(states)
   states.select { |state| state.include?("Dakota") }
 end
 puts includes_dakotas(states).inspect
+
+numbers = 1..10
+
+# sum: Imperative solution
+def imperative_sum(numbers)
+  total = 0
+  numbers.each do |n|
+    total += n
+  end
+  total
+end
+puts imperative_sum(numbers)
+
+# singles: Functional version
+def functional_sum(numbers)
+  numbers.reduce { |total, n| total += n }
+end
+puts functional_sum(numbers)
+
+# sum: Functional solution
+def imperative_lengths(states)
+  lengths = {}
+  states.each do |state|
+    lengths[state] = state.length
+  end
+  lengths
+end
+puts imperative_lengths(states)
+
