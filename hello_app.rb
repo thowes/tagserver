@@ -6,9 +6,9 @@ get '/' do
   dayname = DAYNAMES[Time.now.wday]
   "Hello, world! Happy #{dayname}."
 end
-end; get '/goodbye' do
+get '/goodbye' do
   'goodbye, world!'
-end; get '/hello' do
+end
 
 get '/hello' do
   'hello, world!'
