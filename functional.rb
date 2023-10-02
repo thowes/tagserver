@@ -64,13 +64,13 @@ def imperative_sum(numbers)
 end
 puts imperative_sum(numbers)
 
-# singles: Functional version
 # sum: Functional solution
 def functional_sum(numbers)
   numbers.reduce { |total, n| total += n }
 end
 puts functional_sum(numbers)
 
+# lengths: Imperative version
 def imperative_lengths(states)
   lengths = {}
   states.each do |state|
