@@ -1,6 +1,5 @@
 # Defines a Phrase class (inheriting from String).
 class Phrase < String
-
   # Returns content for palindrome testing.
   def processed_content
     downcase
@@ -31,4 +30,3 @@ class TranslatedPhrase < Phrase
     translation.downcase
   end
 end
-
