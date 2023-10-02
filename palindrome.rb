@@ -28,7 +28,7 @@ class TranslatedPhrase < Phrase
 
   # Processes the translation for palindrome testing.
   def processed_content
-    self.translation.downcase
+    translation.downcase
   end
 end
 
