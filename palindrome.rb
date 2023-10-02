@@ -13,6 +13,6 @@ class Phrase
   end
 
 # Makes the phrase LOUDER.
-def louder; end
+  def louder; end
 
 end
