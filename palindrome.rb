@@ -6,7 +6,7 @@ class Phrase
 end
 
 phrase = Phrase.new("Madam, I'm Adam.")
-puts phrase
+puts phrase.content
 
 # Returns true for a palindrome, false otherwise.
 def palindrome?(string)
