@@ -1,5 +1,5 @@
 # Defines a Phrase class.
-class Phrase
+class Phrase < String
   attr_accessor :content
 
   def initialize(content)
@@ -8,12 +8,12 @@ class Phrase
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content = self.content.downcase
+    processed_content = self.downcase
     processed_content == processed_content.reverse
   end
 
   # Makes the phrase LOUDER.
   def louder
-    self.content.upcase
+    self.upcase
   end
 end
