@@ -16,8 +16,6 @@ class String
   end
 end
 
-
-
 # Defines a translated Phrase.
 class Phrase < String
   attr_accessor :translation
