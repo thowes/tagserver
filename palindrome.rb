@@ -11,4 +11,9 @@ class Phrase
   def initialize(content)
     @content = content
   end
+
+  def palindrome?
+    processed_content = self.content.downcase
+    processed_content == processed_content.reverse
+  end
 end
