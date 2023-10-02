@@ -1,11 +1,9 @@
 # Monkeypatch string to include palindrome.
-class String
+module Palindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
     processed_content == processed_content.reverse
   end
-
-  def blank?; end
 
   private
 
@@ -16,28 +14,6 @@ class String
 
   # Returns content for palindrome testing.
   def processed_content
-    processor(self)
-  end
-end
-
-# Defines a translated Phrase.
-class Phrase < String
-  attr_accessor :translation
-
-  def initialize(content, translation)
-    super(content)
-    @translation = translation
-  end
-
-  # Makes the phrase LOUDER.
-  def louder
-    upcase
-  end
-
-  private
-
-  # Processes the translation for palindrome testing.
-  def processed_content
-    processor(translation)
+    processor(self.to_s)
   end
 end
