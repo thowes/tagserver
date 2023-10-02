@@ -52,6 +52,7 @@ def includes_dakotas(states)
 end
 puts includes_dakotas(states).inspect
 
+
 numbers = 1..10
 
 # sum: Imperative solution
